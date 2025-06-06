@@ -320,7 +320,7 @@ const AFMLearningExplorer = () => {
               </p>
             </div>
 
-            <div className="bg-cyan-50 p-6 rounded-lg border-l-4 border-cyan-400">
+            <div className="bg-cyan-50 p-6 rounded-lg border-l-4 border-cyan-400 mb-6">
               <strong className="text-lg">Beyond AFM:</strong>
               <p className="mt-2">
                 Modern adaptive learning systems often combine AFM with other
@@ -331,9 +331,15 @@ const AFMLearningExplorer = () => {
               </p>
             </div>
 
-            <Link to="/afm-simulator">
-              <button>Go to AFMSimulator</button>
-            </Link>
+            <div className="flex justify-center mb-6">
+              <Link to="/afm-simulator">
+                <button
+                  className="px-8 py-3 rounded-lg font-bold transition-all duration-300 bg-cyan-400 text-white hover:transform hover:-translate-y-1 hover:shadow-lg"
+                >
+                  Go to AFMSimulator
+                </button>
+              </Link>
+            </div>
           </div>
         </div>
       </div>
