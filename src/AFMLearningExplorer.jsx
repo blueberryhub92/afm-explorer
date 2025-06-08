@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import AFMSimulator from "./AFMSimulator";
 import { Link } from 'react-router-dom';
 
 const AFMLearningExplorer = () => {
@@ -195,7 +194,7 @@ const AFMLearningExplorer = () => {
       ability: `Your general ability (θ) ${
         isCorrect ? "increased" : "stayed the same"
       }. This affects ALL future predictions, regardless of the specific concept.`,
-      zpd: `🎯 Perfect! You're in the Zone of Proximal Development (40-80% success probability). This is where optimal learning happens - challenging but achievable!`,
+      zpd: `Perfect! You're in the Zone of Proximal Development (40-80% success probability). This is where optimal learning happens - challenging but achievable!`,
       too_hard: `⚠️ This task is above your ZPD (below 40% success probability). In a real learning system, you would benefit from scaffolding, hints, or prerequisite practice before attempting this level.`,
       limitation: `⚠️ Model Limitation: The AFM may not accurately predict performance on completely new concept types, as it only considers past performance on similar concepts.`,
     };
@@ -219,23 +218,13 @@ const AFMLearningExplorer = () => {
     </div>
   );
 
-  const Tooltip = ({ children, content }) => (
-    <div className="relative inline-block group">
-      {children}
-      <div className="invisible group-hover:visible opacity-0 group-hover:opacity-100 absolute z-50 w-80 bg-slate-800 text-white text-sm rounded-lg p-3 bottom-full left-1/2 transform -translate-x-1/2 mb-2 transition-opacity duration-300 pointer-events-none">
-        <div dangerouslySetInnerHTML={{ __html: content }} />
-        <div className="absolute top-full left-1/2 transform -translate-x-1/2 border-4 border-transparent border-t-slate-800"></div>
-      </div>
-    </div>
-  );
-
   if (currentTask >= tasks.length) {
     return (
       <div className="min-h-screen bg-gradient-to-br from-indigo-500 via-purple-600 to-indigo-800 text-white p-5">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-8">
             <h1 className="text-4xl font-bold mb-2">
-              🧠 AFM Learning Explorer
+              AFM Learning Explorer
             </h1>
             <p className="text-lg opacity-90">
               Discover how the Additive Factor Model predicts your learning
@@ -245,7 +234,7 @@ const AFMLearningExplorer = () => {
 
           <div className="bg-white/95 backdrop-blur-sm rounded-xl p-8 text-gray-800">
             <h2 className="text-3xl font-bold text-center mb-6">
-              🎉 Congratulations!
+              Congratulations!
             </h2>
             <p className="text-center text-xl mb-8">
               You've completed the AFM Learning Explorer!
@@ -378,7 +367,7 @@ const AFMLearningExplorer = () => {
       <div className="max-w-6xl mx-auto">
         {/* Header */}
         <div className="text-center mb-8">
-          <h1 className="text-4xl font-bold mb-2">🧠 AFM Learning Explorer</h1>
+          <h1 className="text-4xl font-bold mb-2">AFM Learning Explorer</h1>
           <p className="text-lg opacity-90">
             Discover how the Additive Factor Model predicts your learning
             success
@@ -501,7 +490,7 @@ const AFMLearningExplorer = () => {
 
           {/* AFM Panel */}
           <div className="bg-white/95 backdrop-blur-sm rounded-xl p-6 text-gray-800 shadow-lg h-fit">
-            <h3 className="text-xl font-bold mb-4">🔬 AFM Model Insights</h3>
+            <h3 className="text-xl font-bold mb-4">AFM Model Insights</h3>
 
             <div className="bg-gray-100 p-4 rounded-lg text-center mb-6 font-serif text-sm">
               ln(p<sub>ij</sub>/(1-p<sub>ij</sub>)) = θ<sub>i</sub> + Σq
@@ -636,7 +625,7 @@ const AFMLearningExplorer = () => {
 
             {showInsight && (
               <div className="bg-gradient-to-r from-yellow-100 to-orange-100 p-4 rounded-lg">
-                <strong>🔍 Model Insight:</strong>
+                <strong>Model Insight:</strong>
                 <p className="mt-2 text-sm">
                   {getInsightText(task, isCorrect)}
                 </p>

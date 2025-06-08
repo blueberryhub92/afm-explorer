@@ -227,14 +227,14 @@ const AFMSimulator = () => {
           <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
             <h2 className="text-2xl font-bold mb-6">Success Probability Over Practice</h2>
             
-            <div className="h-80 mb-4">
+            <div className="h-80 mb-6">
               <ResponsiveContainer width="100%" height="100%">
                 <LineChart data={chartData}>
                   <CartesianGrid strokeDasharray="3 3" stroke="rgba(255,255,255,0.2)" />
                   <XAxis 
                     dataKey="practice" 
                     stroke="white"
-                    label={{ value: 'Practice Opportunities (T)', position: 'insideBottom', offset: -10, style: { textAnchor: 'middle', fill: 'white' } }}
+                    label={{ value: 'Practice Opportunities (T)', position: 'insideBottom', offset: -3, style: { textAnchor: 'middle', fill: 'white' } }}
                   />
                   <YAxis 
                     stroke="white"
